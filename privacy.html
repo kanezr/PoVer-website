@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="includes/style.css">
+  <title>Privacy Policy - PoVer</title>
+</head>
+<body>
+
+<div class="doc-hero">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: November 2026</p>
+</div>
+
+<div class="doc-body">
+  <div class="doc-content">
+    
+    <div class="doc-section">
+      <h2>1. Controller Information</h2>
+      <p>PoVer ("we", "us", "our") is committed to protecting your personal data in accordance with the European Union General Data Protection Regulation (GDPR - EU 2016/679) and other applicable data protection laws.</p>
+      <p>For questions, privacy inquiries, or data requests, you can contact the data controller via:</p>
+      <ul>
+        <li><strong>Support Server:</strong> <a href="https://discord.gg/Zdsw4g6QY4" target="_blank" rel="noopener">Official PoVer Discord Server</a></li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>2. What Data We Collect</h2>
+      <p>PoVer processes data needed to verify account links, operate server features, and prevent abuse. Depending on the features used, this may include:</p>
+      <ul>
+        <li><strong>Account-link data:</strong> Discord user ID and tag, Polytoria username and (when available) user ID, verification timestamps, and verification method.</li>
+        <li><strong>Verification history:</strong> Up to 50 successful verification events per Discord account, including the linked Polytoria username, method, and timestamp.</li>
+        <li><strong>Temporary verification data:</strong> Game sessions expire after 10 minutes; bio verification codes expire after 15 minutes. Short-lived rate-limit counters are also used to prevent abuse.</li>
+        <li><strong>Failed-attempt data:</strong> Discord user ID, attempted Polytoria username, method, reason, and timestamp. These records expire after 30 days; physical cleanup is performed by the Worker cleanup task when its scheduled trigger is enabled.</li>
+        <li><strong>Moderation data:</strong> Discord or Polytoria identifiers, reasons, and timestamps for global or server-specific blacklist entries, retained until removed by an administrator.</li>
+        <li><strong>Server settings:</strong> Server, role, and channel IDs and settings chosen by administrators, such as verification options, nickname format, timeout, and custom verification text. Some presentation settings, such as embed color and image URL, are stored by the bot operator on the bot host.</li>
+      </ul>
+      <p>PoVer does not require passwords, email addresses, or payment information. The bot application does not intentionally store IP addresses or private message contents. Discord, Cloudflare, and other infrastructure providers may process technical or network data under their own privacy policies.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>3. Lawful Basis for Processing (GDPR Art. 6)</h2>
+      <p>We process your personal data under the following legal grounds:</p>
+      <ul>
+        <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> To fulfill your request to link your Discord account to your Polytoria account and manage server role assignments.</li>
+        <li><strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> To maintain server safety, enforce user restrictions/blacklists against abuse, prevent unauthorized access, and protect service integrity.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>4. How We Use Your Data</h2>
+      <p>Your data is used solely to:</p>
+      <ul>
+        <li>Check relevant public Polytoria account/profile information and link your Discord account to your Polytoria account.</li>
+        <li>Assign or remove roles, apply configured server settings, and provide verification history in servers using PoVer.</li>
+        <li>Provide account lookups to server members where administrators have enabled those commands.</li>
+        <li>Prevent abuse, enforce blacklists, maintain service statistics, and record configured verification logs.</li>
+      </ul>
+      <p>Your personal data is never sold, rented, shared with third parties for marketing, or used for advertising.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>5. Where Your Data Is Stored &amp; Data Transfers</h2>
+      <p>Worker account links and other service records are stored in <strong>Cloudflare D1</strong>, provided by Cloudflare, Inc. PoVer no longer uses Cloudflare KV as an application data store. Some per-server presentation settings are stored in a configuration file on the bot operator's host.</p>
+      <p>PoVer also relies on Discord to provide the bot and its interactions, and queries Polytoria's public API for verification. These providers process data under their own terms and privacy policies. Cloudflare may process or store data in locations outside your country or the European Economic Area; applicable transfer arrangements and safeguards are described in Cloudflare's documentation and terms.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>6. Data Retention</h2>
+      <ul>
+        <li><strong>Active account links:</strong> Retained until you use <code>/unverify</code> or request deletion.</li>
+        <li><strong>Verification history:</strong> Up to the latest 50 events are retained separately from the active link. Using <code>/unverify</code> does not remove this history; contact us to request its deletion.</li>
+        <li><strong>Failed-attempt records:</strong> No longer appear in normal application reads after 30 days and are physically removed by the Worker cleanup task when its scheduled trigger is enabled. Temporary game sessions, bio codes, and rate-limit counters expire after their short verification or security windows.</li>
+        <li><strong>Blacklist entries:</strong> Retained until removed by the administrator who manages the relevant blacklist.</li>
+        <li><strong>Server settings:</strong> Retained while PoVer is in the server and deleted from PoVer's stores when the bot is removed, subject to copies or logs retained separately by that server.</li>
+        <li><strong>Discord server logs:</strong> If an administrator configures a log channel, verification events may also appear there. Those messages are controlled and retained by the server and Discord, not by PoVer's D1 database.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>7. Your Data Rights (GDPR Articles 15–22)</h2>
+      <p>Under the GDPR, you hold the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right to Access (Art. 15):</strong> Use <code>/history</code> to view your available verification history, or contact us to request information about other data.</li>
+        <li><strong>Right to Erasure (Art. 17):</strong> Use <code>/unverify</code> to remove your active account link. This does not delete separately retained history or server-side Discord logs; contact us to request deletion of data not removed by that command.</li>
+        <li><strong>Right to Rectification (Art. 16):</strong> Re-verify to update your linked account details, or contact us if you need help correcting other data.</li>
+        <li><strong>Right to Restrict Processing or Object (Arts. 18 &amp; 21):</strong> Contact us to object to or request restriction of processing. Unlinking your account does not automatically erase all other records.</li>
+        <li><strong>Right to Lodge a Complaint (Art. 77):</strong> File a complaint with your local Data Protection Authority (DPA) if you believe your data is processed unlawfully.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>8. Access by Server Administrators</h2>
+      <p>Where lookup commands are enabled, server members may see your linked Polytoria username, Discord tag, and Discord account mention. An account mention identifies your Discord account. Administrators may also see verification events in a configured server log channel.</p>
+      <p>PoVer's standard lookup commands do not show your stored Polytoria user ID or individual verification timestamp. Server administrators control their own channels and may retain messages independently of PoVer.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>9. Policy Updates</h2>
+      <p>We may update this Privacy Policy periodically. If we make material changes to how your data is handled, we will post notice in the <a href="https://discord.gg/Zdsw4g6QY4" target="_blank" rel="noopener">official PoVer Discord server</a> prior to the changes taking effect.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>10. Contact Us</h2>
+      <p>If you have any questions, concerns, or manual deletion requests regarding this Privacy Policy, please reach out in the <a href="https://discord.gg/Zdsw4g6QY4" target="_blank" rel="noopener">official PoVer Discord server</a>.</p>
+    </div>
+
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/tos">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/invite" target="_blank">Invite PoVer</a>
+      <a href="https://discord.gg/Zdsw4g6QY4" target="_blank">Support Server</a>
+    </div>
+    <span class="footer-copy">© 2026 PoVer · Not affiliated with Polytoria</span>
+  </div>
+</footer>
+
+</body>
+</html>
