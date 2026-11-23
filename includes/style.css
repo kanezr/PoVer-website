@@ -1,0 +1,43 @@
+.doc-hero {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.doc-body {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.doc-section {
+  padding: 10px;
+  border-top: 1px solid black;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li, p, h2, h1, a, span {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid black;
+}

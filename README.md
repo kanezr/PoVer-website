@@ -1,2 +1,6 @@
-# pover-web-dashboard
-The web dashboard for PoVer
+# the website of PoVer
+source code and stuff
+
+privacy policy, tos and css files.
+
+thanks for reading!
